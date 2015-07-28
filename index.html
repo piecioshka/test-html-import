@@ -1,0 +1,23 @@
+<link id="tmpl-1" rel="import" href="templates/import-1.html" async/>
+<script>
+    (function (root) {
+        'use strict';
+
+        var $t = root.document.querySelector('#tmpl-1');
+        console.log('1a', $t.import);
+
+        $t.addEventListener('load', function () {
+            console.log('1b', $t.import);
+        });
+    }(this));
+</script>
+
+<link id="tmpl-2" rel="import" href="templates/import-2.html"/>
+<script>
+    (function (root) {
+        'use strict';
+
+        var $t = root.document.querySelector('#tmpl-2');
+        console.log('2', $t.import);
+    }(this));
+</script>
